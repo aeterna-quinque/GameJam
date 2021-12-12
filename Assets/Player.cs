@@ -13,9 +13,13 @@ public class Player : MonoBehaviour
 
     public Bar foodBar;
     public Bar waterBar;
-    
-    public bool begin = true;
 
+    public int increasingFoodValue = 10;
+    public int feedFoodValue = 10;
+
+    public int increasingWaterValue = 10;
+    public int feedWaterValue = 10;
+    
     private void Start()
     {
         currentFood = maxFoodValue;
@@ -35,32 +39,48 @@ public class Player : MonoBehaviour
         //     DecreaseResources(1, 1);
         // }
     }
-    
-    // private void DecreaseResources(int food, int water)
-    // {
-    //     currentFood -= food;
-    //     foodBar.SetValue(currentFood);
-    //     
-    //     currentWater -= water;
-    //     waterBar.SetValue(currentWater);
-    // }
 
-    // private void DecreaseFood()
-    // {
-    //     if (currentFood > 0)
-    //     {
-    //         currentFood -= 10;
-    //         foodBar.SetValue(currentFood);
-    //     }
-    // }
-    //
-    // private void DecreaseWater()
-    // {
-    //     if (currentWater > 0)
-    //     {
-    //         currentWater -= 10;
-    //         foodBar.SetValue(currentWater);
-    //     }
-    // }
+    public void IncreaseFood()
+    {
+        currentFood += increasingFoodValue;
+        foodBar.SetValue(currentFood);
+    }
+
+    public bool IsFoodInventoryFull()
+    {
+        return currentFood == maxFoodValue;
+    }
     
+    public void IncreaseWater()
+    {
+        currentWater += increasingWaterValue;
+        foodBar.SetValue(currentWater);
+    }
+
+    public bool IsWaterInventoryFull()
+    {
+        return currentWater == maxWaterValue;
+    }
+
+    public void DecreaseFood()
+    {
+        currentFood -= feedFoodValue;
+        foodBar.SetValue(currentFood);
+    }
+    
+    public bool IsFoodInventoryEmpty()
+    {
+        return currentFood == 0;
+    }
+    
+    public void DecreaseWater()
+    {
+        currentWater -= feedWaterValue;
+        waterBar.SetValue(currentWater);
+    }
+    
+    public bool IsWaterInventoryEmpty()
+    {
+        return currentWater == 0;
+    }
 }
