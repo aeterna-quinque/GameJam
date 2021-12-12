@@ -9,6 +9,9 @@ namespace Assets
 {
     public class Animal : Usable
     {
+        private void Start()
+        {
+        }
         protected override void HandleInteractionStarted(Collider collider)
         {
             base.HandleInteractionStarted(collider);
