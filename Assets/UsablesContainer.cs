@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets;
 using TMPro;
 using UnityEngine;
 
@@ -11,7 +12,7 @@ public class UsablesContainer : MonoBehaviour
     private SphereCollider _playerCollider;
     [Header("Usables")]
     [SerializeField]
-    private Usable _usablePrefab;
+    private Animal _usablePrefab;
     [SerializeField] [Min(1)]
     private int _usablesCount;
 

@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af0d204e-27d4-4292-a1c4-e61883017930" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameJam/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/New Material.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Usable.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Usable.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Usable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Usable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UsablesContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UsablesContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,13 +26,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Animal.cs" />
         <option value="$PROJECT_DIR$/Assets/Bar.cs" />
         <option value="$PROJECT_DIR$/Assets/BillBoard.cs" />
         <option value="$PROJECT_DIR$/Assets/Camera.cs" />
         <option value="$PROJECT_DIR$/Assets/Cow.cs" />
         <option value="$PROJECT_DIR$/Assets/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Usable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Animal.cs" />
         <option value="$PROJECT_DIR$/Assets/UsablesContainer.cs" />
       </list>
     </option>
@@ -76,7 +77,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639250492393</updated>
-      <workItem from="1639250512836" duration="10814000" />
+      <workItem from="1639250512836" duration="11088000" />
+      <workItem from="1639311164356" duration="3078000" />
     </task>
     <servers />
   </component>
