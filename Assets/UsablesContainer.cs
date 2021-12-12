@@ -1,6 +1,7 @@
 ﻿using Assets;
 using System.Collections;
 using System.Collections.Generic;
+using Assets;
 using TMPro;
 using UnityEngine;
 
@@ -12,16 +13,14 @@ public class UsablesContainer : MonoBehaviour
     private SphereCollider _playerCollider;
     [Header("Usables")]
     [SerializeField]
-    private Usable _usablePrefab;
+    private Animal[] _usablePresets;
     [SerializeField]
-    private Usable[] _usablePresets;
-
+    private Source[] _sourcePresets;
+    
     private float _spawnRadius;
     private float _rotationAngleUnit;
 
     private bool _isRotationFreezed;
-
-    private HashSet<Usable> _usablesSet = new HashSet<Usable>();
 
     public Transform cam;
 
@@ -37,9 +36,18 @@ public class UsablesContainer : MonoBehaviour
 
             var usable = Instantiate(preset, _parentTransform, true);
             usable.SetPositionAndRotation(_playerCollider.center, rotation);
-            _usablesSet.Add(usable);
             usable.foodCanvas.cam = cam;
             usable.waterCanvas.cam = cam; 
+
+            currentAngle += _rotationAngleUnit;
+        }
+        
+        foreach (var preset in _sourcePresets)
+        {
+            Vector3 rotation = new Vector3(0, currentAngle, 0);
+
+            var usable = Instantiate(preset, _parentTransform, true);
+            usable.SetPositionAndRotation(_playerCollider.center, rotation);
 
             currentAngle += _rotationAngleUnit;
         }
