@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,13 +28,14 @@ namespace Assets
         
         public override void Start()
         {
+            base.Start();
             currentFood = maxFoodValue;
             foodBar.SetMaxValue(maxFoodValue);
         
             currentWater = maxWaterValue;
             waterBar.SetMaxValue(maxWaterValue);
         }
-        
+
         protected override void HandleInteractionStarted(Collider collider)
         {
             base.HandleInteractionStarted(collider);
