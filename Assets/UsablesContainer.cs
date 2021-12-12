@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UsablesContainer : MonoBehaviour
@@ -21,6 +22,8 @@ public class UsablesContainer : MonoBehaviour
 
     private HashSet<Usable> _usablesSet = new HashSet<Usable>();
 
+    public Transform cam;
+
     private void Start()
     {
         _spawnRadius = _playerCollider.center.x;
@@ -33,16 +36,23 @@ public class UsablesContainer : MonoBehaviour
             var usable = Instantiate(_usablePrefab, _parentTransform, true);
             usable.SetPositionAndRotation(_playerCollider.center, rotation);
             _usablesSet.Add(usable);
+            usable.foodCanvas.cam = cam;
+            usable.waterCanvas.cam = cam;
         }
 
         Usable.OnUsageStart += () => { _isRotationFreezed = true; };
         Usable.OnUsageEnd += () => { _isRotationFreezed = false; };
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         //if (_isRotationFreezed)
         //    return;
-        transform.Rotate(new Vector3(0, 1, 0), Space.Self);
+        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            var y = transform.rotation.y;
+            transform.Rotate(new Vector3(0, y + _rotationAngle, 0), Space.Self);
+        }
     }
 }
