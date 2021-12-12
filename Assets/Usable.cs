@@ -12,7 +12,19 @@ public class Usable : MonoBehaviour
 
     public static event Action OnUsageStart;
     public static event Action OnUsageEnd;
+    
+    public int maxFoodValue = 100;
+    public int currentFood;
+    
+    public int maxWaterValue = 100;
+    public int currentWater;
 
+    public Bar foodBar;
+    public Bar waterBar;
+
+    public BillBoard foodCanvas;
+    public BillBoard waterCanvas;
+        
     public void SetPositionAndRotation(Vector3 position, Vector3 rotation)
     {
         _objTransform.SetPositionAndRotation(position, new Quaternion());
@@ -21,6 +33,12 @@ public class Usable : MonoBehaviour
 
     private void Start()
     {
+        currentFood = maxFoodValue;
+        foodBar.SetMaxValue(maxFoodValue);
+        
+        currentWater = maxWaterValue;
+        waterBar.SetMaxValue(maxWaterValue);
+        
         _collider.OnInteractionStarted += HandleInteractionStarted;
         _collider.OnInteractionEnded += HandleInteractionEnded;
     }
